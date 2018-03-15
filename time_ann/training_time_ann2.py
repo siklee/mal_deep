@@ -5,11 +5,11 @@ import csv
 import pickle
 import time
 
-MAL_PATH = 'E:\\data\\time\\mal'  # 피쳐해쉬 폴더목록
-BENIGN_PATH = 'E:\\data\\time\\benign_train'
-BASE_PATH = 'E:\\data\\time\\model\\'
-START_DAY = 20170727
-END_DAY = 20170830
+MAL_PATH = 'D:\\seek\\data\\time\\mal'  # 피쳐해쉬 폴더목록
+BENIGN_PATH = 'D:\\seek\\data\\time\\benign_train'
+BASE_PATH = 'D:\\seek\\data\\time\\model1\\'
+START_DAY = 20170802
+END_DAY = 20170930
 MONITER_SIZE = 1
 
 # for using tensorflow as hyper parameter
