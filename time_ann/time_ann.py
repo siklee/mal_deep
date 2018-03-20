@@ -4,11 +4,12 @@ import os, sys
 import csv
 import pickle
 import time
+import re
 
-MAL_PATH = 'E:\\data\\time\\mal'  # 피쳐해쉬 폴더목록
-BENIGN_PATH = 'E:\\data\\time\\benign_test'
-MODEL_PATH = 'E:\\data\\time\\window1'
-CSV_PATH='E:\\data\\time\\csv'
+MAL_PATH = 'D:\\seek\\data\\time\\mal'  # 피쳐해쉬 폴더목록
+BENIGN_PATH = 'D:\\seek\\data\\time\\benign_test'
+MODEL_PATH = 'D:\\seek\\data\\time\\model_div2'
+CSV_PATH='D:\\seek\\data\\time\\csv'
 CSV_FILENAME = ''
 
 # for using tensorflow as hyper parameter
@@ -136,6 +137,8 @@ def make_path():     # start_day end_day : int
     for x in model_list:
         model_path.append(os.path.join(MODEL_PATH,x))
         tmp = x.split('.')[1]
+        if tmp.find('div')>0:
+            tmp = tmp.split('div')[0]
         mal_path.append(os.path.join(MAL_PATH,tmp))
     for x in range(model_path.__len__()-1):
         print('model :',model_path[x])
